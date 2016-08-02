@@ -1,0 +1,21 @@
+{
+	"name": "pyrsmk/lumy3",
+	"description": "A Chernozem wrapper around Slim framework",
+	"keywords": ["slim","chernozem","framework"],
+	"license": "MIT",
+	"authors": [{
+		"name": "Aurélien Delogu",
+		"email": "dev@dreamysource.fr",
+		"homepage": "http://dreamysource.io/project/lumy3"
+	}],
+	"require": {
+		"php": ">=5.4.0",
+		"slim/slim": "^3.0",
+		"pyrsmk/chernozem": "^4.1"
+	},
+	"autoload": {
+		"psr-4" : {
+			"Lumy\\" : "src/"
+		}
+	}
+}
