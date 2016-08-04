@@ -1,7 +1,7 @@
-Lumy 3.0.0
+Lumy 3.1.0
 ==========
 
-Lumy is just a wrapper that merges [Slim](http://www.slimframework.com) framework and [Chernozem](https://github.com/pyrsmk/Chernozem) container. It simply extends Chernozem and route all method calls to Slim. Please read both documentations to know how to use Lumy.
+Lumy is just a wrapper that merges [Slim](http://www.slimframework.com) framework and [Chernozem](https://github.com/pyrsmk/Chernozem) container. Please read both documentations to know how to use Lumy.
 
 Simple example
 --------------
@@ -9,21 +9,21 @@ Simple example
 ```php
 $app = new Lumy\App();
 
-// Add a Twig service
+// Add a service
 $app['twig'] = $app->service(function($app) {
   $loader = new Twig_Loader_Filesystem('/path/to/templates');
-  $twig = new Twig_Environment($loader, array(
+  $twig = new Twig_Environment($loader, [
       'cache' => '/path/to/compilation_cache',
-  ));
+  ]);
 });
 
 // Add a route
-$app->get('/hello/{name}', function($request, $response) {
+$app->get('/', function($request, $response) {
     // Render the template
-    $this['twig']->render('index.html', array(
+    $this['twig']->render('index.html', [
       'the' => 'variables',
       'go' => 'here'
-    ));
+    ]);
 });
 
 $app->run();
