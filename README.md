@@ -11,10 +11,10 @@ $app = new Lumy\App();
 
 // Add a service
 $app['twig'] = $app->service(function($app) {
-	$loader = new Twig_Loader_Filesystem('/path/to/templates');
-	$twig = new Twig_Environment($loader, [
-	  'cache' => '/path/to/compilation_cache',
-	]);
+    $loader = new Twig_Loader_Filesystem('/path/to/templates');
+    $twig = new Twig_Environment($loader, [
+        'cache' => '/path/to/compilation_cache',
+    ]);
 });
 
 // Add a route
