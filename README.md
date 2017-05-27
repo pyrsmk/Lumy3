@@ -1,4 +1,4 @@
-Lumy 3.1.0
+Lumy 3.1.1
 ==========
 
 Lumy is just a wrapper that merges [Slim](http://www.slimframework.com) framework and [Chernozem](https://github.com/pyrsmk/Chernozem) container. Please read both documentations to know how to use Lumy.
@@ -11,10 +11,10 @@ $app = new Lumy\App();
 
 // Add a service
 $app['twig'] = $app->service(function($app) {
-  $loader = new Twig_Loader_Filesystem('/path/to/templates');
-  $twig = new Twig_Environment($loader, [
-      'cache' => '/path/to/compilation_cache',
-  ]);
+	$loader = new Twig_Loader_Filesystem('/path/to/templates');
+	$twig = new Twig_Environment($loader, [
+	  'cache' => '/path/to/compilation_cache',
+	]);
 });
 
 // Add a route
