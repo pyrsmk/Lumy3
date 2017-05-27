@@ -1,4 +1,4 @@
-Lumy 3.1.1
+Lumy 3.2.0
 ==========
 
 Lumy is just a wrapper that merges [Slim](http://www.slimframework.com) framework and [Chernozem](https://github.com/pyrsmk/Chernozem) container. Please read both documentations to know how to use Lumy.
